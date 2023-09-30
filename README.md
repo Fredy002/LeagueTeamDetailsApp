@@ -6,6 +6,9 @@ An Android application designed to showcase relevant information of football tea
 - Team Name
 - Team Logo
 - Stadium Name
+  
+![App Screenshot](https://github.com/Fredy002/LeagueTeamDetailsApp/assets/104151778/28311b79-96f8-4660-95d3-3e9b3921f745)
+
 
 ## Features
 

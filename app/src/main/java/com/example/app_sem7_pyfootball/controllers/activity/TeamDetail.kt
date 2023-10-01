@@ -17,6 +17,11 @@ class TeamDetail : AppCompatActivity() {
     lateinit var tvNameDetail: TextView
     lateinit var tvVenueName: TextView
     lateinit var fabSave: FloatingActionButton
+    lateinit var tvCityName: TextView
+    lateinit var tvYearFounded: TextView
+    lateinit var tvSurfaceType: TextView
+    lateinit var tvLocationOfManagement: TextView
+    lateinit var tvCapacityShare: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,6 +31,11 @@ class TeamDetail : AppCompatActivity() {
         tvNameDetail = findViewById(R.id.tvNameDetail)
         tvVenueName = findViewById(R.id.tvVenueName)
         fabSave = findViewById(R.id.fabSave)
+        tvCityName = findViewById(R.id.tvCityName)
+        tvYearFounded = findViewById(R.id.tvYearFounded)
+        tvSurfaceType = findViewById(R.id.tvSurfaceType)
+        tvLocationOfManagement = findViewById(R.id.tvLocationOfManagement)
+        tvCapacityShare = findViewById(R.id.tvCapacityShare)
         
         initFields(this)
     }
@@ -46,6 +56,19 @@ class TeamDetail : AppCompatActivity() {
 
         tvNameDetail.text = teamObject?.name
         tvVenueName.text = teamObject?.venueName
+        tvCityName.text = teamObject?.cityName
+        tvYearFounded.text = teamObject?.yearFounded.toString()
+        tvSurfaceType.text = teamObject?.surfaceType
+
+        val address = teamObject?.locationOfManagement
+        if (address != null) {
+            tvLocationOfManagement.text = address
+        } else {
+            tvLocationOfManagement.text = "No address"
+        }
+
+        tvCapacityShare.text = teamObject?.capacityShare.toString()
+
 
         fabSave.setOnClickListener {
             saveTeam(teamObject)

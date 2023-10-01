@@ -15,5 +15,15 @@ class Team (
     @SerializedName("logo")
     val logo: String,
     @SerializedName("venue_name")
-    val venueName : String
+    val venueName : String,
+    @SerializedName("venue_city")
+    val cityName: String,
+    @SerializedName("founded")
+    val yearFounded: Int,
+    @SerializedName("venue_surface")
+    val surfaceType: String,
+    @SerializedName("venue_address")
+    val locationOfManagement: String,
+    @SerializedName("venue_capacity")
+    val capacityShare: Int
 ): Serializable

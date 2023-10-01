@@ -29,12 +29,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="50dp"
-            android:textColor="#FF0000"
+            android:layout_marginTop="24dp"
+            android:textColor="#494747"
             android:textSize="20sp"
             android:textStyle="bold|italic"
             app:layout_constraintStart_toEndOf="@+id/ivLogo"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Aquí viene el texto" />
+            tools:text="Name of the team" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
